@@ -1,0 +1,9 @@
+.loader {
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	position: fixed;
+	overflow: visible;
+	background: #ffffff url("./assets/customLoader_spinny.gif") no-repeat center;
+	background-size: 40rem;
+}

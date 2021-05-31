@@ -1,0 +1,42 @@
+.nav {
+	background: $darkBlue;
+	color: $white;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	padding: 0 5rem 0 3rem;
+	z-index: 10;
+	width: 100%;
+
+	img {
+		width: 25%;
+	}
+
+	&-btn {
+		display: none;
+
+		@media screen and (max-width: 768px) {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translate(-100%, 75%);
+			background: none;
+			border: none;
+			font-size: 1.8rem;
+		}
+	}
+
+	&-menu {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 1.2rem;
+		width: 70%;
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	background: $darkBlue;
+	color: $white;
+	padding: 10px 20px;
+	font-size: 1.2rem;
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		width: 10%;
+	}
+}
