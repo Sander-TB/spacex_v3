@@ -1,27 +1,19 @@
-.home-hero{
-  width: 100;
-  text-align: center;
-  margin: auto;
+.home-hero {
+	width: 100;
+	text-align: center;
+	margin: auto;
+	margin-top: 3rem;
 
-  &-heading {
-	font-weight: 200;
-  font-size: 12rem;
-  padding: 1.5rem 0;
-  color: $darkBlue;
+	&-heading {
+		padding: 1.5rem 0;
+		color: $darkBlue;
+	}
 
-	  .highlight {
-		  color: $highlight;
-      font-weight: 600;
-	  }
-  }
-
-  &-paragraph {
-    font-size: 1.4rem;
-    color: $darkBlue;
-    line-height: 1.4;
-    margin: 1rem auto 5rem auto;
-    font-style: italic;
-  }
+	&-paragraph {
+		font-size: 1.4rem;
+		color: $darkBlue;
+		line-height: 1.4;
+		margin: 1rem auto 5rem auto;
+		font-style: italic;
+	}
 }
-
-

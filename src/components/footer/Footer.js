@@ -4,6 +4,7 @@ import {
 	IoLogoLinkedin,
 	IoLogoInstagram,
 	IoLogoFlickr,
+	IoArrowRedoOutline,
 } from "react-icons/io5";
 
 export default function Footer() {
@@ -44,7 +45,7 @@ export default function Footer() {
 			</ul>
 			<p>
 				<a href='https://www.spacex.com/' target='_blank' rel='noreferrer'>
-					Visit SpaceX's site
+					Visit SpaceX's site <IoArrowRedoOutline className="icon" />
 				</a>
 			</p>
 		</footer>

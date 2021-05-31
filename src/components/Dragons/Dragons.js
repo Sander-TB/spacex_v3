@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "../../assets/customLoader_spinny.gif";
 
 export default function Dragons() {
 	const [dragonsInfo, setDragonsInfo] = useState("");
@@ -26,7 +27,12 @@ export default function Dragons() {
 		[]
 	);
 
-	if (loading) return <div>Loading...</div>;
+	if (loading)
+		return (
+			<div>
+				<img src={Loader} alt='loader' />
+			</div>
+		);
 	if (error) return <div>An error has occurred, please reload the page</div>;
 
 	return (
@@ -47,7 +53,8 @@ export default function Dragons() {
 						<a
 							href={dragon.wikipedia}
 							target='_blank'
-							rel='noopener noreferrer'>
+							rel='noopener noreferrer'
+							className='btn'>
 							Read More
 						</a>
 					</div>

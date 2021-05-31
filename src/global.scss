@@ -4,6 +4,9 @@
 @import "./scss/footer";
 @import "./scss/buttons";
 @import "./scss/home";
+@import "./scss/helpers";
+@import "./scss/about";
+@import "./scss/headings";
 
 * {
 	margin: 0;
@@ -25,7 +28,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 	&:hover {
-		color: $gray;
+		color: $highlight;
 	}
 }
 

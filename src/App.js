@@ -7,7 +7,6 @@ import History from "./components/History/History";
 import Roadster from "./components/Roadster/Roadster";
 import Dragons from "./components/Dragons/Dragons";
 import Rockets from "./components/Rockets/Rockets";
-import Contact from "./components/Contact/Contact";
 
 function App() {
 	return (
@@ -31,9 +30,6 @@ function App() {
 				</Route>
 				<Route path='/rockets'>
 					<Rockets />
-				</Route>
-				<Route path='/contact'>
-					<Contact />
 				</Route>
 			</Switch>
 			<Footer />

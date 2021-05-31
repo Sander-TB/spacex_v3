@@ -1,4 +1,12 @@
+import { useHistory } from "react-router-dom";
+
 export default function Hero() {
+	const history = useHistory();
+
+	function goToAbout() {
+		history.push("/about");
+	}
+
 	return (
 		<section className='home-hero'>
 			<h1 className='heading home-hero-heading'>
@@ -11,6 +19,9 @@ export default function Hero() {
 				better than the past. And I can’t think of anything more exciting than
 				going out there and being among the stars.” -Elon Musk
 			</p>
+			<button onClick={goToAbout} className='btn'>
+				Get To Know SpaceX
+			</button>
 		</section>
 	);
 }

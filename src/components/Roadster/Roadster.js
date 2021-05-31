@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "../../assets/customLoader_spinny.gif";
 
 export default function Roadster() {
 	const [roadsterInfo, setRoadsterInfo] = useState("");
@@ -27,7 +28,12 @@ export default function Roadster() {
 		[]
 	);
 
-	if (loading) return <div>Loading...</div>;
+	if (loading)
+		return (
+			<div>
+				<img src={Loader} alt='loader' />
+			</div>
+		);
 	if (error) return <div>An error has occurred, please reload the page</div>;
 
 	return (
@@ -48,7 +54,8 @@ export default function Roadster() {
 			<a
 				href={roadsterInfo.wikipedia}
 				target='_blank'
-				rel='noopener noreferrer'>
+				rel='noopener noreferrer'
+				className='btn'>
 				Read More
 			</a>
 		</section>
