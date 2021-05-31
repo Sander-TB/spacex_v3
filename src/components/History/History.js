@@ -10,10 +10,9 @@ export default function Info() {
 
 	useEffect(
 		() => {
-			async function getLaunch() {
+			async function getHistory() {
 				try {
 					const response = await axios.get(url);
-					console.log(response.data);
 					setHistory(response.data);
 				} catch (e) {
 					setError(error);
@@ -21,7 +20,7 @@ export default function Info() {
 					setLoading(false);
 				}
 			}
-			getLaunch();
+			getHistory();
 		},
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 		[]
@@ -33,6 +32,21 @@ export default function Info() {
 	return (
 		<section className='History'>
 			<h2>Historical Events</h2>
+			{history.map((Event) => {
+				return (
+					<div key={Event.id}>
+						<h3>{Event.title}</h3>
+						<p>{Event.details}</p>
+						<p>{Event.event_date_utc}</p>
+						<a
+							href={Event.links.article}
+							target='_blank'
+							rel='noopener noreferrer'>
+							Read More
+						</a>
+					</div>
+				);
+			})}
 		</section>
 	);
 }

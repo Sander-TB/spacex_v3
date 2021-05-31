@@ -15,8 +15,10 @@ export default function Nav() {
 			<div className='nav-menu'>
 				<Link to='/'>Home</Link>
 				<Link to='/about'>About</Link>
-				<Link to='/technologies'>Technologies</Link>
-				<Link to='/contact'>Contact</Link>
+				<Link to='/history'>History</Link>
+				<Link to='/roadster'>Roadster</Link>
+				<Link to='/dragons'>Dragons</Link>
+				<Link to='/rockets'>Rockets</Link>
 			</div>
 		</nav>
 	);

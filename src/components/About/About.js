@@ -13,7 +13,6 @@ export default function Info() {
 			async function getLaunch() {
 				try {
 					const response = await axios.get(url);
-					console.log(response.data);
 					setInfo(response.data);
 				} catch (e) {
 					setError(error);
@@ -31,7 +30,7 @@ export default function Info() {
 	if (error) return <div>An error has occurred, please reload the page</div>;
 
 	return (
-		<section className='info'>
+		<section className='About'>
 			<h2>Who are SpaceX?</h2>
 			<p>{info.summary}</p>
 			<ul>
