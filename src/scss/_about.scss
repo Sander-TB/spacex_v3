@@ -1,18 +1,154 @@
 .about {
-  display: flex;
-  flex-direction: row;
-  margin-top: 2rem;
-  width: 100%;
-  &-left {
-    flex-direction: column;
-    width: 70%;
-  }
-  &-right {
-    flex-direction: column;
-    width: 30%;
-  }
-  &-container {
-    flex-direction: column;
-    align-items: center;
-  }
+	display: flex;
+	flex-direction: row;
+	margin-top: 2rem;
+	width: 100%;
+	font-size: 1.6rem;
+	line-height: 1.6;
+
+	&-left {
+		flex-direction: column;
+		width: 70%;
+		max-width: 50ch;
+		margin-right: 5rem;
+
+		h3 {
+			font-weight: bold;
+			font-size: 1.9rem;
+			padding-left: 2rem;
+			margin-top: 2rem;
+		}
+
+		p {
+			padding-bottom: 1rem;
+			line-height: 2;
+		}
+
+		ul {
+			text-transform: capitalize;
+			margin-top: 1rem;
+		}
+
+		li {
+			margin-left: 2rem;
+		}
+
+		li::before {
+			content: "\2014\a0";
+		}
+	}
+
+	&-right {
+		flex-direction: column;
+		width: 30%;
+		flex: 2;
+
+		h4 {
+			font-size: 2.5rem;
+			padding-bottom: 1rem;
+		}
+
+		&-copy {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			font-size: 1rem;
+		}
+	}
+	&-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@media screen and (max-width: 1150px) {
+		&-left {
+			width: 50%;
+
+			p {
+				padding-bottom: 1.5rem;
+				line-height: 2;
+				width: 100%;
+			}
+
+			ul {
+				text-transform: capitalize;
+				margin-top: 1rem;
+				font-size: 1.4rem;
+
+				li {
+					margin-left: 2rem;
+				}
+			}
+		}
+
+		&-right {
+			width: 50%;
+			margin-bottom: 3rem;
+
+			h4 {
+				font-size: 1.4rem;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&-left {
+			flex-direction: column;
+			width: 90%;
+			max-width: 100%;
+			margin-right: 0;
+
+			ul {
+				font-size: 1.3rem;
+				width: 100%;
+				margin-bottom: 3rem;
+				padding: 0 1rem 0 2rem;
+			}
+		}
+
+		&-right {
+			flex-direction: column;
+			width: 80%;
+			margin-bottom: 3rem;
+
+			h4 {
+				font-size: 1.9rem;
+				margin-bottom: 1rem;
+			}
+		}
+
+		&-container {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+	margin: 0 5rem;
+
+	h2 {
+		margin-bottom: 2rem;
+	}
+
+	&-info {
+		font-size: 1.3rem;
+		margin: 0 2rem;
+		line-height: 1.6;
+	}
+
+	@media screen and (max-width: 1150px) {
+		margin: 3rem;
+	}
+
+	@media screen and (max-width: 768px) {
+		margin: 0;
+	}
 }

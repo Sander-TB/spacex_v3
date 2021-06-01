@@ -1,8 +1,8 @@
 .nav {
 	background: $darkBlue;
 	color: $white;
-	height: 80px;
 	display: flex;
+	height: 80px;
 	align-items: center;
 	padding: 0 5rem 0 3rem;
 	z-index: 10;
@@ -10,12 +10,16 @@
 
 	img {
 		width: 25%;
+
+		@media screen and (max-width: 768px) {
+			width: 50%;
+		}
 	}
 
 	&-btn {
 		display: none;
 
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 1150px) {
 			display: block;
 			position: absolute;
 			top: 0;
@@ -24,6 +28,7 @@
 			background: none;
 			border: none;
 			font-size: 1.8rem;
+			cursor: pointer;
 		}
 	}
 
@@ -35,8 +40,21 @@
 		font-size: 1.2rem;
 		width: 70%;
 
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 1150px) {
 			display: none;
 		}
 	}
+}
+
+.mav-mobile {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+	font-size: 1.6rem;
+	color: $white;
+	background: $darkBlue;
+	height: 100vh;
+	justify-content: space-evenly;
 }

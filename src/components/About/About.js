@@ -8,7 +8,8 @@ export default function Info() {
 	const [error, setError] = useState(null);
 
 	const url = "https://api.spacexdata.com/v3/info";
-	const apodUrl = "https://api.nasa.gov/planetary/apod?api_key=f9eczuMd9oEnj2lbaeE8ELqdnoIw7ITHXeVOaHmJ";
+	const apodUrl =
+		"https://api.nasa.gov/planetary/apod?api_key=f9eczuMd9oEnj2lbaeE8ELqdnoIw7ITHXeVOaHmJ";
 
 	useEffect(
 		() => {
@@ -36,25 +37,32 @@ export default function Info() {
 
 	return (
 		<section className='about-container'>
-			<h2>Who are Space<span className="highlight">X</span>?</h2>
-			<main className="about">
-				<section className="about-left">
-					<p>{info.summary}</p>
+			<h2>
+				Who are Space<span className='highlight'>X</span>?
+			</h2>
+
+			<main className='about'>
+				<section className='about-left'>
+					<p className='about-container-info'>{info.summary}</p>
+					<h3>Some Facts:</h3>
 					<ul>
 						<li>
-							Founded in {info.founded} by {info.founder}
+							It was founded in {info.founded} by {info.founder}
 						</li>
+						<li>They have over {info.employees} employees</li>
 						<li>
-							Headquarters located at {info.headquarters.address},{" "}
+							Their Headquarters are located at {info.headquarters.address},{" "}
 							{info.headquarters.city}, {info.headquarters.state}
 						</li>
-						<li>Employees: {info.employees}</li>
 					</ul>
 				</section>
-				<aside className="about-right">
-					<img src={apod.hdurl} alt={apod.title}/>
-					<p> &copy; {apod.copyright}</p>
-					<p> 📸 {apod.date}</p>
+				<aside className='about-right'>
+					<h4>Astrology Picture of the day:</h4>
+					<img src={apod.hdurl} alt={apod.title} />
+					<div className='about-right-copy'>
+						<p> &copy; {apod.copyright}</p>
+						<p> 📸 {apod.date}</p>
+					</div>
 				</aside>
 			</main>
 		</section>
