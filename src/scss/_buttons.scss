@@ -6,16 +6,14 @@
 	margin-bottom: 2rem;
 	background-color: inherit;
 	cursor: pointer;
+	color: $darkBlue;
+
 	&:hover,
 	&:focus {
 		box-shadow: inset 20rem 0 0 0 $highlight;
-		border: 2px solid rgba(0, 0, 0, 0);
+		border: 4px solid rgba(0, 0, 0, 0);
 		transition: 0.8s;
+		color: $darkBlue;
 	}
-}
 
-// And from the left
-.slide:hover,
-.slide:focus {
-	box-shadow: inset 6.5em 0 0 0 var(--hover);
 }

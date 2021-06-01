@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "../../assets/customLoader_spinny.gif";
+import dateFormat from "dateformat";
 
 export default function Info() {
 	const [history, setHistory] = useState("");
@@ -36,24 +37,24 @@ export default function Info() {
 	if (error) return <div>An error has occurred, please reload the page</div>;
 
 	return (
-		<section className='History'>
+		<section className='history'>
 			<h2>Historical Events</h2>
-			{history.map((Event) => {
-				return (
-					<div key={Event.id}>
-						<h3>{Event.title}</h3>
-						<p>{Event.details}</p>
-						<p>{Event.event_date_utc}</p>
-						<a
-							href={Event.links.article}
-							target='_blank'
-							rel='noopener noreferrer'
-							className='btn'>
-							Read More
-						</a>
-					</div>
-				);
-			})}
+			<div className='history-grid'>
+				{history.map((Event) => {
+					const date = dateFormat(Event.event_date_utc, "mmmm dS, yyyy");
+
+					return (
+						<div key={Event.id} className='history-grid-card'>
+							<a href={Event.links.article} target='_blank' rel='noopener noreferrer'>
+								<h3>{Event.title}</h3>
+								<p className="date">{date}</p>
+								<p className="slug">{Event.details}</p>
+								<button className='btn btn-read-more'>Read More</button>
+							</a>
+						</div>
+					);
+				})}
+			</div>
 		</section>
 	);
 }
