@@ -38,10 +38,11 @@ export default function Rockets() {
 
 	return (
 		<section>
+		<h2>Rockets</h2>
 			{rocketsInfo.map((rocket) => {
 				return (
 					<div key={rocket.id}>
-						<h2>{rocket.rocket_name}</h2>
+						<h3>{rocket.rocket_name}</h3>
 						<img src={rocket.flickr_images[0]} alt={rocket.rocket_name} />
 						<img src={rocket.flickr_images[1]} alt={rocket.rocket_name} />
 						<p>{rocket.description}</p>

@@ -1,0 +1,19 @@
+.roadster {
+  display: flex;
+  flex-direction: column;
+
+  h2{
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: row;
+
+    &-images{
+      width: 40%;
+    }
+    &-text{}
+  }
+}

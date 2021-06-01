@@ -37,10 +37,11 @@ export default function Dragons() {
 
 	return (
 		<section className='Dragons'>
+		<h2>Dragons</h2>
 			{dragonsInfo.map((dragon) => {
 				return (
 					<div key={dragon.id}>
-						<h2>{dragon.name}</h2>
+						<h3>{dragon.name}</h3>
 						<img src={dragon.flickr_images[0]} alt={dragon.name} />
 						<img src={dragon.flickr_images[1]} alt={dragon.name} />
 						<img src={dragon.flickr_images[2]} alt={dragon.name} />

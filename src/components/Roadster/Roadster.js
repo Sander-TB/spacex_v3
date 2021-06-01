@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "../../assets/customLoader_spinny.gif";
+import dateFormat from "dateformat";
 
 export default function Roadster() {
 	const [roadsterInfo, setRoadsterInfo] = useState("");
@@ -36,16 +37,23 @@ export default function Roadster() {
 		);
 	if (error) return <div>An error has occurred, please reload the page</div>;
 
+
+	const date = dateFormat(roadsterInfo.launch_date_utc, "mmmm dS, yyyy");
+
 	return (
-		<section>
+		<section className="roadster">
 			<h2>{roadsterInfo.name}</h2>
-			<div className='roadster-images'>
+			<div className="roadster-inner">
+
+			<div className='roadster-inner-images'>
 				<img src={roadsterInfo.flickr_images[0]} alt={roadsterInfo.name} />
 				<img src={roadsterInfo.flickr_images[1]} alt={roadsterInfo.name} />
 				<img src={roadsterInfo.flickr_images[3]} alt={roadsterInfo.name} />
 			</div>
+
+			<div className="roadster-inner-text">
 			<ul>
-				<li>Launch Date: {roadsterInfo.launch_date_utc} </li>
+				<li>Launch Date: {date} </li>
 				<li>Weight: {roadsterInfo.launch_mass_kg} kg</li>
 				<li>Speed: {roadsterInfo.speed_mph} mph</li>
 				<li>Distance From Earth: {roadsterInfo.earth_distance_km} Km</li>
@@ -58,6 +66,9 @@ export default function Roadster() {
 				className='btn'>
 				Read More
 			</a>
+			</div>
+
+			</div>
 		</section>
 	);
 }
