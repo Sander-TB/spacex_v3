@@ -9,12 +9,14 @@
 @import "./scss/headings";
 @import "./scss/history";
 @import "./scss/roadster";
+@import "./scss/dragons";
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: $font-stack;
+	overflow-x: hidden;
 }
 
 body {

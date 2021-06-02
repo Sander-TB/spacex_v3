@@ -36,29 +36,39 @@ export default function Dragons() {
 	if (error) return <div>An error has occurred, please reload the page</div>;
 
 	return (
-		<section className='Dragons'>
+		<section className='dragons'>
 		<h2>Dragons</h2>
 			{dragonsInfo.map((dragon) => {
 				return (
-					<div key={dragon.id}>
+					<div key={dragon.id} className="dragons-card">
 						<h3>{dragon.name}</h3>
-						<img src={dragon.flickr_images[0]} alt={dragon.name} />
-						<img src={dragon.flickr_images[1]} alt={dragon.name} />
-						<img src={dragon.flickr_images[2]} alt={dragon.name} />
-						<p>{dragon.description}</p>
-						<ul>
-							<li>Diameter: {dragon.diameter.meters}</li>
-							<li>Crew Capacity: {dragon.crew_capacity}</li>
-							<li>Orbit Duration: {dragon.orbit_duration_yr} years</li>
-						</ul>
-						<a
-							href={dragon.wikipedia}
-							target='_blank'
-							rel='noopener noreferrer'
-							className='btn'>
-							Read More
-						</a>
+						
+						<div className="dragons-card-inner">
+							
+							<div className="inner-card-left">
+								<p>{dragon.description}</p>
+								<ul>
+									<li>Diameter: {dragon.diameter.meters} m</li>
+									<li>Crew Capacity: {dragon.crew_capacity} persons</li>
+									<li>Orbit Duration: {dragon.orbit_duration_yr} years</li>
+								</ul>
+								<a
+									href={dragon.wikipedia}
+									target='_blank'
+									rel='noopener noreferrer'
+									className='btn'>
+									Read More
+								</a>
+							</div>
+
+							<div className="inner-card-right">
+								<img src={dragon.flickr_images[0]} alt={dragon.name} />
+							</div>
+
+						
 					</div>
+
+				</div>
 				);
 			})}
 		</section>
