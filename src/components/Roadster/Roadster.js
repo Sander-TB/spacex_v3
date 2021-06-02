@@ -37,37 +37,33 @@ export default function Roadster() {
 		);
 	if (error) return <div>An error has occurred, please reload the page</div>;
 
-
 	const date = dateFormat(roadsterInfo.launch_date_utc, "mmmm dS, yyyy");
 
 	return (
-		<section className="roadster">
+		<section className='roadster'>
 			<h2>{roadsterInfo.name}</h2>
-			<div className="roadster-inner">
+			<div className='roadster-inner'>
+				<div className='roadster-inner-images'>
+					<img src={roadsterInfo.flickr_images[0]} alt={roadsterInfo.name} />
+					<img src={roadsterInfo.flickr_images[1]} alt={roadsterInfo.name} />
+				</div>
 
-			<div className='roadster-inner-images'>
-				<img src={roadsterInfo.flickr_images[0]} alt={roadsterInfo.name} />
-				<img src={roadsterInfo.flickr_images[1]} alt={roadsterInfo.name} />
-				<img src={roadsterInfo.flickr_images[3]} alt={roadsterInfo.name} />
-			</div>
-
-			<div className="roadster-inner-text">
-			<ul>
-				<li>Launch Date: {date} </li>
-				<li>Weight: {roadsterInfo.launch_mass_kg} kg</li>
-				<li>Speed: {roadsterInfo.speed_mph} mph</li>
-				<li>Distance From Earth: {roadsterInfo.earth_distance_km} Km</li>
-			</ul>
-			<p>{roadsterInfo.details}</p>
-			<a
-				href={roadsterInfo.wikipedia}
-				target='_blank'
-				rel='noopener noreferrer'
-				className='btn'>
-				Read More
-			</a>
-			</div>
-
+				<div className='roadster-inner-text'>
+					<ul>
+						<li>Launch Date: {date} </li>
+						<li>Weight: {roadsterInfo.launch_mass_kg} kg</li>
+						<li>Speed: {roadsterInfo.speed_mph} mph</li>
+						<li>Distance From Earth: {roadsterInfo.earth_distance_km} Km</li>
+					</ul>
+					<p>{roadsterInfo.details}</p>
+					<a
+						href={roadsterInfo.wikipedia}
+						target='_blank'
+						rel='noopener noreferrer'
+						className='btn'>
+						Read More
+					</a>
+				</div>
 			</div>
 		</section>
 	);

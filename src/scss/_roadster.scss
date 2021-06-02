@@ -1,19 +1,74 @@
 .roadster {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	margin: 0 5rem;
 
-  h2{
-    text-align: center;
-    padding: 3rem 0;
-  }
+	h2 {
+		text-align: center;
+		padding: 3rem 0;
+	}
 
-  &-inner {
-    display: flex;
-    flex-direction: row;
+	&-inner {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
 
-    &-images{
-      width: 40%;
-    }
-    &-text{}
-  }
+		&-images {
+			width: 40%;
+		}
+		&-text {
+			ul {
+				font-size: 1.7rem;
+
+				li {
+					padding-bottom: 1rem;
+				}
+			}
+			p {
+				margin-top: 3rem;
+				margin-bottom: 3rem;
+				font-size: 1.4rem;
+				line-height: 1.7;
+			}
+		}
+
+		@media screen and (max-width: 1150px) {
+			&-images {
+				width: 50%;
+			}
+			&-text {
+				margin-left: 2rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.roadster {
+		margin: 0 2rem;
+
+		&-inner {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			&-images {
+				width: 100%;
+				margin-bottom: 3rem;
+			}
+			&-text {
+				width: 100%;
+				ul {
+					font-size: 1.3rem;
+				}
+
+				p {
+					font-size: 1.2rem;
+					line-height: 2.3rem;
+					width: 90%;
+				}
+			}
+		}
+	}
 }
