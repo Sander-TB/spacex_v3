@@ -50,10 +50,20 @@ export default function Roadster() {
 
 				<div className='roadster-inner-text'>
 					<ul>
-						<li>Launch Date: {date} </li>
-						<li>Weight: {roadsterInfo.launch_mass_kg} kg</li>
-						<li>Speed: {roadsterInfo.speed_mph} mph</li>
-						<li>Distance From Earth: {roadsterInfo.earth_distance_km} Km</li>
+						<li>
+							<span className='bold'>Launch Date:</span> {date}{" "}
+						</li>
+						<li>
+							<span className='bold'>Weight:</span>{" "}
+							{roadsterInfo.launch_mass_kg} kg
+						</li>
+						<li>
+							<span className='bold'>Speed:</span> {roadsterInfo.speed_mph} mph
+						</li>
+						<li>
+							<span className='bold'>Distance From Earth:</span>{" "}
+							{roadsterInfo.earth_distance_km} Km
+						</li>
 					</ul>
 					<p>{roadsterInfo.details}</p>
 					<a

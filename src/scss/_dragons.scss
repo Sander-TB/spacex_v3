@@ -1,94 +1,88 @@
 .dragons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 5rem;
 
+	h2 {
+		margin: 2rem 0 5rem 0;
+	}
 
-  h2 {
-    margin: 2rem 0 5rem 0;
-  }
+	&-card {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
 
+		h3 {
+			margin-bottom: 2rem;
+			font-weight: bold;
+		}
 
-  &-card {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5rem;
+		&-inner {
+			display: flex;
+			flex-direction: row;
 
-    h3 {
-    margin-bottom: 2rem;
-    font-weight: bold;
-    }
-     
+			.inner-card-right {
+				width: 50%;
 
-    &-inner {
-      display: flex;
-      flex-direction: row;
+				img {
+					width: 100%;
+					padding-left: 2rem;
+				}
+			}
 
-      .inner-card-right {
-        width: 50%;
- 
-        
-        img {
-          width: 100%;
-          padding-left: 2rem;
-        }
-      }
+			.inner-card-left {
+				width: 50%;
+				font-size: 1.6rem;
+				line-height: 1.6;
+				display: flex;
+				flex-direction: column;
+				padding-right: 2rem;
 
-      .inner-card-left {
-        width: 50%;
-        font-size: 1.6rem;
-        line-height: 1.6;
-        display: flex;
-        flex-direction: column;
-        padding-right: 2rem;
-      
-      ul {
-        margin: 2rem 0;
-      }
+				ul {
+					margin: 2rem 0;
+				}
 
-      a {
-        width: 35%;
-      }
+				a {
+					width: 35%;
+				}
 
-      @media screen and (max-width: 1150px) {
-        font-size: 1.3rem;
-        padding-right: 5rem;
+				@media screen and (max-width: 1150px) {
+					font-size: 1.3rem;
+					padding-right: 5rem;
 
-        a {
-        width: 80%;
-      }
-      }
-    }
-  }
-
-    
-  }
+					a {
+						width: 80%;
+					}
+				}
+			}
+		}
+	}
 }
 
-
-
 @media screen and (max-width: 768px) {
+	.dragons {
+		margin: 0 3rem;
 
-  .dragons {
-    margin: 0 3rem;
+		h2 {
+			font-size: 5rem;
+		}
+	}
 
-    h2 {
-      font-size: 5rem;
-    }
-  }
+	.dragons-card-inner {
+		flex-direction: column-reverse;
 
-  .dragons-card-inner{
-    flex-direction: column-reverse;
+		.inner-card-left {
+			width: 100%;
+			padding-right: 0;
+		}
 
-    .inner-card-left{
-      width: 100%;
-    }
-
-    .inner-card-right{
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-  }
-
+		.inner-card-right {
+			width: 100%;
+			margin-bottom: 2rem;
+			img {
+				padding: 0;
+			}
+		}
+	}
 }
